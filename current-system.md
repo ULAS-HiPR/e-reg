@@ -6,8 +6,7 @@ what is true now. Nothing is designed, built or flown yet.
 Owner: Kione. Helpers: Anav. Next milestone: James: do we build it?.
 
 Seeded from the [Notion brief](https://app.notion.com/p/41ecc5f72fe28137bd9bf30438c0246f) and from Ogma2's decisions as they stood on
-22 November. Where they disagree, Ogma2's decisions win, and the difference is
-listed below.
+22 November. Where they disagree, Ogma2's decisions win.
 
 ## Purpose
 

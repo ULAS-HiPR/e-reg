@@ -1,6 +1,6 @@
 # e-reg
 
-HiPR's the electronics for propulsion's electronic pressure regulator. Owner: Kione. Helpers: Anav.
+HiPR's electronics for propulsion's electronic pressure regulator. Owner: Kione. Helpers: Anav.
 Nothing is designed, built or flown yet.
 
 **Start here:** [current system](current-system.md) → [decisions](decisions.md) → [Notion brief](https://app.notion.com/p/41ecc5f72fe28137bd9bf30438c0246f).
