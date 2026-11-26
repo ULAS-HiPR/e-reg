@@ -1,0 +1,22 @@
+## E-Reg Reference Systems
+
+| Team | What moves the valve? | What does it measure? | Loop speed | Safe state / loss of power |
+|----------|----------|----------|----------|----------|
+| **NASA Electronic Pressure Regulator (EPR)** | An electric motor drives the regulator valve. The controller tells the motor to open or close the valve until the desired pressure is reached. | Measures **regulated outlet pressure** using pressure transducers. The controller compares the measured pressure against the target pressure and adjusts the valve position accordingly. Some designs also monitor supply pressure. | Closed-loop electronic control system. Exact update frequency was not identified from the document. | Designed as a fail-safe pressure regulator. On power loss the system enters a safe condition to prevent uncontrolled pressurisation. |
+| **Imperial College London Rocketry (ICLR) E-Reg** | Motor-actuated control valve driven by a local controller on the E-Reg board. | Measures **tank/manifold pressure** using pressure transducers. May also use valve position feedback depending on the final implementation. | Local control loop running on the E-Reg microcontroller. Exact loop frequency not publicly specified. | Intended to enter a safe state during faults or communication loss. Specific behaviour still requires verification from the project documentation. |
+| **Berkeley Space Enterprise (BSE) E-Reg** | A geared DC motor rotates a ball valve. An inner PID loop controls valve position while an outer PID loop controls pressure. | Measures **downstream/tank pressure** using pressure transducers and **valve position** for motor feedback. The measured pressure is compared to a setpoint and the valve angle is adjusted accordingly. | Continuous local PID control. Exact loop frequency was not published. | Power-loss behaviour is not explicitly published. Safe-state operation depends on valve configuration and actuator design. |
+| **2024 Electronic Pressure Regulation System (ArXiv)** | Electronically actuated control valve operated by a software feedback controller. | Measures **system pressure** through pressure transducers and uses those readings to regulate pressure around a desired setpoint. | Feedback control loop implemented in software. Exact operating frequency requires further review of the paper. | Includes fault handling and protection logic, though exact power-loss behaviour requires further review. |
+
+### Common Features
+
+All  E-Reg implementations follow the same fundamental control architecture:
+1. Pressure transducers measure the current system pressure.
+2. A controller compares the measured pressure to a specific target.
+3. An actuator is used to control a valve (open/close).
+4. valve : used to control pressure .
+5. Pressure is adjusted by the e-reg until the currently measured presure matches the target pressure.
+
+The main differences between implementations are:
+- The type of valve actuator used.
+- The control algorithm and loop frequency.
+- The fault handling and safe-state
